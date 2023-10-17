@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "mindfit-f89d6": {
+      "hosting": {
+        "MindFit": [
+          "mindfit-f89d6"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "mindfit-f89d6"
+  }
+}
