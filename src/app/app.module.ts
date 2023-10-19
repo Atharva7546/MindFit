@@ -1,12 +1,13 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-// <<<<<<< HEAD
-import {AngularFireModule} from '@angular/fire/compat'
+import { FormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
+
+// import {AngularFireModule} from '@angular/fire/compat'
+
+// import {AngularFireModule} from '@angular/fire';
 
 
-// =======
-import {AngularFireModule} from '@angular/fire';
-// >>>>>>> 5985428a025ab3a5d72402fab7e217a00eafc09f
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SplashScreenComponent } from './splash-screen/splash-screen.component';
@@ -14,6 +15,7 @@ import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
 import { provideAuth,getAuth } from '@angular/fire/auth';
 import { provideFirestore,getFirestore } from '@angular/fire/firestore';
+import { LoginComponent } from './login/login.component';
 
 // const firebaseConfig = {
 //   apiKey: 'YOUR_API_KEY',
@@ -28,22 +30,25 @@ import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 @NgModule({
   declarations: [
     AppComponent,
-    SplashScreenComponent
+    SplashScreenComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
-<<<<<<< HEAD
-    AppRoutingModule,
-    AngularFireModule.initializeApp(environment.firebase),
-  //   provideFirebaseApp(() => initializeApp(environment.firebase)),
-  //   provideAuth(() => getAuth()),
-  //   provideFirestore(() => getFirestore())
-=======
+    FormsModule,
+    RouterModule,
+// <<<<<<< HEAD
+//     AppRoutingModule,
+//     AngularFireModule.initializeApp(environment.firebase)
+//   //   provideFirebaseApp(() => initializeApp(environment.firebase)),
+//   //   provideAuth(() => getAuth()),
+//   //   provideFirestore(() => getFirestore())
+// =======
 
     // AngularFireModule.initializeApp(firebaseConfig),
     // AngularFireDatabaseModule,
-    AppRoutingModule
->>>>>>> 5985428a025ab3a5d72402fab7e217a00eafc09f
+
+// >>>>>>> 5985428a025ab3a5d72402fab7e217a00eafc09f
   ],
   providers: [],
   bootstrap: [AppComponent]
